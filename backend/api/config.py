@@ -3,7 +3,7 @@ import mysql.connector
 TITLE = "CloudPass"
 DESCRIPTION = "CloudPass API"
 VERSION = "0.0.1"
-DOCS = "None" # or "/docs" or None
+DOCS = None # or "/docs" or None
 #JWT Config
 SECRET_KEY = "CloudPass123"
 ALGORITHM = "HS256"
