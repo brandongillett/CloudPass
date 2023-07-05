@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="{{ url_for('static',filename='img/favicon.svg') }}" type="image/svg+xml">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/base.css') }}"
+    />
+    <script src="https://kit.fontawesome.com/49df394992.js" crossorigin="anonymous"></script>
+    <title>{% block title %}Base{% endblock %}</title>
+  </head>
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/"><i class="fa-solid fa-cloud"></i> CloudPass</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-links">
+        <a href="/" ><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/download" ><i class="fa-solid fa-download"></i> Download</a>
+        {% if user.is_authenticated %}
+        <a href="/dashboard/passwords" ><i class="fa-solid fa-gauge"></i> Dashboard</a>
+        <div class="dropdown">
+          <a class="dropdown-btn" ><i class="fa fa-user-circle-o"></i> </a>
+          <div class="dropdown-content">
+            <div class="dropdown-title"> Hello, {{user.username}}!</div>
+            <a href="/account"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+          </div>
+        </div>
+        {% else %}
+        <a href="/login"><i class="fa-sharp fa-solid fa-right-to-bracket"></i> Login / Register</a>
+
+        {% endif %}
+      </div>
+    </div>
+    <div class="content">
+      {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %} 
+          {% for category, message in messages %} 
+              {% if category == 'error' %}
+              <div class="alert error">
+                <span class="alert-closebtn">&times;</span>  
+                <strong><i class="fa-solid fa-circle-exclamation"></i> Error!</strong> {{ message }}
+              </div>
+              {% elif category == 'success' %}
+              <div class="alert success">
+                <span class="alert-closebtn">&times;</span>  
+                <strong><i class="fa-solid fa-circle-check"></i> Success!</strong> {{ message }}
+              </div>
+            {% endif %} 
+          {% endfor %} 
+        {% endif %} 
+      {% endwith %}
+
+      {% block content %} {% endblock %}
+    </div>
+
+
+    {% if show_footer %}
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="footer-text">
+                CloudPass is a password manager that allows you to securely store your passwords and personal information in the cloud.
+                <br>
+                Implemented using Flask (website), FastApi (api), and MariaDB (database), Dockerized and deployed using Docker Compose. Windows app built in C# .Net Framework.
+              </p>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="github" href="https://github.com/brandongillett" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/brandon-gillett-45130a216/" target="_blank"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    {% endif %}
+
+
+    {% block javascript %}
+    <script type="text/javascript" src="{{ url_for('static',filename='js/base.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+{% block content %}
+<link
+rel="stylesheet"
+href="{{ url_for('static',filename='css/login.css') }}"
+/>
+
+<div class="form-wrap">
+    <div class="tabs">
+      <h1>CloudPass</h1>
+      <h3 class="login-tab"><a class="active" href="#">Login</a></h3>
+      <h3 class="signup-tab"><a href="#register">Register</a></h3>
+    </div>
+
+    <div class="tabs-content">
+      <div id="signup-tab-content">
+        <form class="signup-form" action="" method="post">
+          <input type="hidden" name="form_type" value="register">
+          <input type="email" class="input" id="email" name="email" placeholder="Email" {% if session_data.email %} value="{{session_data.email}}" {% endif %}/>
+          <input type="username" class="input" id="username" name="username" placeholder="Username" {% if session_data.username %} value="{{session_data.username}}" {% endif %}/>
+          <input type="password" class="input" id="password" name="password" placeholder="Password"/>
+          <button type="submit" class="button">Register</button>
+        </form>
+      </div>
+
+      <div id="login-tab-content" class="active">
+        <form class="login-form" action="" method="post">
+          <input type="hidden" name="form_type" value="login">
+          <input type="username" class="input" id="username" name="username" placeholder="Username" {% if session_data.username %} value="{{session_data.username}}" {% elif remember_username %} value="{{remember_username}}" {% endif %} />
+          <input type="password" class="input" id="password" name="password" placeholder="Password"/>
+          <!-- <input type="checkbox" class="checkbox" id="remember_me" name="remember_me"> -->
+          <!-- <label for="remember_me">Remember Username</label> -->
+          <button type="submit" class="button">Login</button>
+        </form>
+      </div>
+    </div>
+</div>
+<script>
+  var loginTab = document.querySelector('.login-tab a');
+  var signupTab = document.querySelector('.signup-tab a');
+  var loginContent = document.querySelector('#login-tab-content');
+  var signupContent = document.querySelector('#signup-tab-content');
+  var registerLink = document.querySelector('a[href="#register"]');
+
+  loginTab.addEventListener('click', function() {
+    loginTab.classList.add('active');
+    signupTab.classList.remove('active');
+    loginContent.classList.add('active');
+    signupContent.classList.remove('active');
+  });
+
+  signupTab.addEventListener('click', function() {
+    signupTab.classList.add('active');
+    loginTab.classList.remove('active');
+    signupContent.classList.add('active');
+    loginContent.classList.remove('active');
+  });
+
+  if (window.location.hash === '#register') {
+    registerLink.click();
+  } 
+</script>
+{% endblock %}
