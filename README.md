@@ -14,7 +14,7 @@
       <br>
   </p>
   </h3>
-<img src="https://github.com/brandongillett/CloudPass/assets/82180479/cf8d9da3-8561-498a-907a-0f3c9dd45200" alt="CloudPass" height="50%">
+<img src="https://github.com/brandongillett/CloudPass/assets/82180479/cf8d9da3-8561-498a-907a-0f3c9dd45200" alt="CloudPass" height="2%">
   
 ## 📝 Table of Contents
 - [About](#about)
