@@ -15,9 +15,6 @@
   </p>
   </h3>
 <img src="https://github.com/brandongillett/CloudPass/assets/82180479/cf8d9da3-8561-498a-907a-0f3c9dd45200" alt="CloudPass" width="1000" height="500">
-![image](https://github.com/brandongillett/CloudPass/assets/82180479/a646f5ad-4476-4e82-b926-db4a28478e0e)
-![Untitled](https://github.com/brandongillett/CloudPass/assets/82180479/ad0f9142-66b1-4fde-ac06-55f2ae892938)
-
   
 ## 📝 Table of Contents
 - [About](#about)
