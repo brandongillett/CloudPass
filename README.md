@@ -10,7 +10,7 @@
 
 ---
 <h3 align="center">
-      Lorem Ipsum Description
+      This project is a highly secure cloud-based password manager that provides robust storage and management of user passwords. It consists of a backend API developed using FastAPI, incorporating industry-standard security measures such as JWT tokens for API security and hashed keys for storing user passwords. The database backend utilizes MariaDB for secure data storage. The website is built with Flask and is reverse proxied with NGINX. The entire application is containerized using Docker for easy deployment, scalability, and enhanced security.
       <br>
   </p>
   </h3>
@@ -25,56 +25,49 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-The purpose of this project is to help junior developers understand sockets in a fun way that they could have possibly learned in cybersecurity classes(such as I did). The use of threading and subprocesses is something that is demonstrated here as well which makes this a great introduction to cyber security/operating systems for many developers looking to get educated in these fields. Many features for the host such as information on existing clients also demonstrates the use of databases in SQLite.
+The Cloud Password Manager is designed to securely store and manage user passwords in the cloud. It provides users with a centralized platform to store their passwords, eliminating the need to remember multiple login credentials. This project aims to demonstrate the implementation of a secure password management system using modern web technologies.
 ## 🏁 Getting Started <a name = "getting_started"></a>
-All you will need to get started is an updated version of Python3 and Ubuntu/Kali Linux.
-
-Installing Python3 (linux)
-
-```
-sudo apt update
-
-sudo apt install python3
-```
+All you will need to get started is an updated version of Docker on any system
 
 ### Prerequisites
-None at the moment. (As newer versions get released requirements.txt might be in place).
+- Docker
 
 ### Running
-After downloading the repository to get this running you do not need much as the client script is currently hardcoded and will be implemented for users to create custom scripts.  
-Just run the rshell.py with python3 with admin privileges.
+The Cloud Password Manager can be deployed to any environment that supports Docker. By utilizing Docker containers, the deployment process becomes simplified and consistent across different platforms. Follow these steps for deployment:
+
+- Set up a server or cloud instance with Docker installed.
+- Clone the project repository to the server.
+- Build and start the Docker containers using the provided Docker Compose file.
 
 ```
-sudo python3 rshell.py
-```
-From here the host side is all setup, we just need to run the client.py on the client's computer.
-
-```
-sudo python3 client.py
+docker-compose build
+docker-compose up -d
 ```
 
 
 ## 🎈 Usage <a name="usage"></a>
-Once you have the host system set up (VPS or Local) and the client is connected, you are now able to reverse shell using the commands created.
+Once the Cloud Password Manager is up and running, users can perform the following actions:
 
-To find the commands:
-
-```
-help [optional command]
-```
+- Register a new account with a unique username and password.
+- Log in using the registered credentials, generating a secure JWT token for API authentication.
+- Access and manage passwords securely through the user-friendly web interface.
+- Generate strong passwords using customizable options for enhanced security.
+- Analyze password strength to guide users towards creating robust passwords.
+- Retrieve and update stored passwords while maintaining strict access control.
+- Update account information and manage security settings.
 
 
 ## 🚀 Deployment <a name = "deployment"></a>
 If you want to install this on a VPS it will be the same as described above just make sure you have the correct ports open and change the IP address in the settings found at the top of the rshell.py script.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
-- [Python3](https://www.python.org/) - Language
-- [Sqlite](https://www.sqlite.org/) - Database
-- [Kali Linux](https://www.kali.org/) - Operating System
+- [Python3](https://www.python.org/) - Api and Website
+- [MariaDB](https://mariadb.org/) - Database
+- [NGINX](https://www.nginx.com/) - Reverse Proxy
+- [Docker](https://www.docker.com/) - Containerization
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@brandongillett](https://github.com/brandongillett) - Developer
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-- [@byob](https://github.com/malwaredllc/byob) - Much credit to this repo and @malwaredllc for the inspiration behind this project
 - [@The-Documentation-Compendium](https://github.com/kylelobo/The-Documentation-Compendium) - Documentation behind the README
