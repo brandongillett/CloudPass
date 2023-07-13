@@ -1,7 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
 </p>
-![banner](https://github.com/brandongillett/CloudPass/assets/82180479/bf8fd5c6-4a58-4a38-bf4a-172d16440355)
 
 <h1 align="center">CloudPass</h1>
 
