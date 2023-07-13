@@ -25,7 +25,9 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-      CloudPass is a highly secure cloud-based password manager that provides robust storage and management of user passwords. It consists of a backend API developed using FastAPI, incorporating industry-standard security measures such as JWT tokens for API security and hashed keys for storing user passwords. The database backend utilizes MariaDB for secure data storage. The website is built with Flask and is reverse proxied with NGINX. The entire application is containerized using Docker for easy deployment, scalability, and enhanced security.
+
+  CloudPass is a highly secure cloud-based password manager that provides robust storage and management of user passwords. It consists of a backend API developed using FastAPI, incorporating industry-standard security measures such as JWT tokens for API security and hashed keys for storing user passwords. The database backend utilizes MariaDB for secure data storage. The website is built with Flask and is reverse proxied with NGINX. The entire application is containerized using Docker for easy deployment, scalability, and enhanced security.
+      
 ## 🏁 Getting Started <a name = "getting_started"></a>
 All you will need to get started is an updated version of Docker on any system
 
