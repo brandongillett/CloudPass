@@ -10,7 +10,7 @@
 
 ---
 <h3 align="center">
-      This project is a highly secure cloud-based password manager that provides robust storage and management of user passwords. It consists of a backend API developed using FastAPI, incorporating industry-standard security measures such as JWT tokens for API security and hashed keys for storing user passwords. The database backend utilizes MariaDB for secure data storage. The website is built with Flask and is reverse proxied with NGINX. The entire application is containerized using Docker for easy deployment, scalability, and enhanced security.
+      This project demonstrates the use of my development skills to create a backend API that enables secure communication across multiple platforms. It incorporates industry-standard practices and production-level tactics, ensuring its readiness for deployment on an industry-wide scale. Leveraging Docker, the project follows industry-level standards for containerization, making it easily deployable on a server for seamless deployment and scalability.
       <br>
   </p>
   </h3>
@@ -25,7 +25,7 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-The Cloud Password Manager is designed to securely store and manage user passwords in the cloud. It provides users with a centralized platform to store their passwords, eliminating the need to remember multiple login credentials. This project aims to demonstrate the implementation of a secure password management system using modern web technologies.
+      CloudPass is a highly secure cloud-based password manager that provides robust storage and management of user passwords. It consists of a backend API developed using FastAPI, incorporating industry-standard security measures such as JWT tokens for API security and hashed keys for storing user passwords. The database backend utilizes MariaDB for secure data storage. The website is built with Flask and is reverse proxied with NGINX. The entire application is containerized using Docker for easy deployment, scalability, and enhanced security.
 ## 🏁 Getting Started <a name = "getting_started"></a>
 All you will need to get started is an updated version of Docker on any system
 
