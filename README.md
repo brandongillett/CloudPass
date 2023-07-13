@@ -14,8 +14,8 @@
       <br>
   </p>
   </h3>
-  <img src="https://user-images.githubusercontent.com/82180479/221098267-600c4b61-2e4f-450b-bf63-7c01c710dd86.png" alt="Reverse Shell" width="1000" height="500">
-  <img width="1421" alt="image" src="https://github.com/brandongillett/CloudPass/assets/82180479/83adae74-eab2-498f-bbee-a83fe5512fd8">
+<img width="1418" alt="image" src="https://github.com/brandongillett/CloudPass/assets/82180479/5e5a3f3b-8f3e-4853-b5ca-66389cede87f">
+
 
 ## 📝 Table of Contents
 - [About](#about)
