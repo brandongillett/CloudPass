@@ -33,6 +33,7 @@ All you will need to get started is an updated version of Docker on any system
 
 ### Prerequisites
 - Docker
+- Docker Compose
 
 ### Running
 The Cloud Password Manager can be deployed to any environment that supports Docker. By utilizing Docker containers, the deployment process becomes simplified and consistent across different platforms. Follow these steps for deployment:
